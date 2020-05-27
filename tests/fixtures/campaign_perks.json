@@ -1,0 +1,49 @@
+{
+  "response": [
+    {
+      "id": 41123499424,
+      "campaign_slug": "another-campaign",
+      "amount": 1,
+      "description": "You get a lot of cool stuff.",
+      "number_claimed": 3,
+      "number_available": null,
+      "estimated_delivery_date": null,
+      "shipping_address_required": false,
+      "label": "An Awesome Perk",
+      "validation_errors": null,
+      "featured": false,
+      "non_tax_deductible_amount": null,
+      "perk_type": "standard",
+      "shipping_fees": null,
+      "visible": true,
+      "secret": false
+    },
+    {
+      "id": 41123499424,
+      "campaign_slug": "another-campaign",
+      "amount": 1,
+      "description": "You get even more of cool stuff.",
+      "number_claimed": 3,
+      "number_available": 17,
+      "estimated_delivery_date": null,
+      "shipping_address_required": false,
+      "label": "Another Awesome Perk",
+      "validation_errors": null,
+      "featured": false,
+      "non_tax_deductible_amount": null,
+      "perk_type": "standard",
+      "shipping_fees": null,
+      "visible": true,
+      "secret": false
+    }
+  ],
+  "count": 2,
+  "pagination": {
+    "previous": null,
+    "next": null,
+    "current": 1,
+    "per_page": 30,
+    "count": 2,
+    "pages": 1
+  }
+}

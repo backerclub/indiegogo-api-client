@@ -1,0 +1,9 @@
+{
+  "response": {
+    "id": 12345,
+    "firstname": "John",
+    "lastname": "Doe",
+    "avatar_url": "https://g1.iggcdn.com/assets/individuals/missing/thumbnail-deaf450c2d4183b9309b493f6a7b20d62f8d31617ec828d060df465abe92ef2a.png",
+    "name": "John Doe"
+  }
+}
