@@ -1,14 +1,12 @@
 <?php
 
-
 namespace Indiegogo\Entity;
-
 
 use Indiegogo\AbstractEntity;
 
 class Currency extends AbstractEntity
 {
-    private int  $isoNum;
+    private int $isoNum;
     private string $isoCode;
     private string $symbol;
 

@@ -10,9 +10,9 @@ abstract class PaginatedResponse extends AbstractEntity
     private Pagination $pagination;
     protected array $response;
 
-    abstract function setResponse(array $response): void;
+    abstract public function setResponse(array $response): void;
 
-    abstract function getResponse(): array;
+    abstract public function getResponse(): array;
 
     /**
      * @return int

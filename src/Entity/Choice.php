@@ -1,15 +1,13 @@
 <?php
 
-
 namespace Indiegogo\Entity;
-
 
 use Indiegogo\AbstractEntity;
 
 class Choice extends AbstractEntity
 {
-   private string $name;
-   private string $value;
+    private string $name;
+    private string $value;
 
     /**
      * @return string

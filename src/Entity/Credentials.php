@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Indiegogo\Entity;
-
 
 use Indiegogo\AbstractEntity;
 
@@ -216,6 +214,4 @@ class Credentials extends Account
     {
         $this->address = $address;
     }
-
-
 }

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Indiegogo\Entity;
 
 use Indiegogo\AbstractEntity;
