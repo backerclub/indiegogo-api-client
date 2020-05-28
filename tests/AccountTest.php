@@ -1,4 +1,5 @@
 <?php
+
 namespace Indiegogo\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
@@ -6,7 +7,7 @@ use GuzzleHttp\Psr7\Response;
 
 class AccountTest extends ClientTestCase
 {
-    public function test_account_request_returns_account_object()
+    public function testAccountRequestReturnsAccountObject()
     {
         $mock = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . '/fixtures/account.json')),

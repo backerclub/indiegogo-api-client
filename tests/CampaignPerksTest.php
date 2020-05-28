@@ -1,4 +1,5 @@
 <?php
+
 namespace Indiegogo\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
@@ -6,7 +7,7 @@ use GuzzleHttp\Psr7\Response;
 
 class CampaignPerksTest extends ClientTestCase
 {
-    public function test_campaign_perks_request_returns_campaignPerksresponse_object()
+    public function testCampaignPerksRequestReturnsCampaignPerksresponseObject()
     {
         $mock = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . '/fixtures/campaign_perks.json')),
@@ -18,5 +19,4 @@ class CampaignPerksTest extends ClientTestCase
 
         $this->assertInstanceOf(\Indiegogo\Response\CampaignPerksResponse::class, $campaignPerksResponse);
     }
-
 }

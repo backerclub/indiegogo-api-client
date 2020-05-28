@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Indiegogo;
 
 use GuzzleHttp\ClientInterface;
@@ -44,6 +43,37 @@ class Client
         } else {
             $this->httpClient = $httpClient;
         }
+    }
+
+    /**
+     * Search API
+     * https://developer.indiegogo.com/docs/search
+     *
+     * @param array $params
+     * @param int $page
+     * @return CampaignsResponse
+     */
+    public function search(array $params = [], $page = 1)
+    {
+        $requestOptions = [
+            'query' => ['page' => $page]
+        ];
+
+        if (!empty($params)) {
+            foreach ($params as $key => $value) {
+                $requestOptions['query'][$key] = $value;
+            }
+        }
+
+        $response = $this->request(
+            'GET',
+            $this->apiUrl . 'search/campaigns.json',
+            $requestOptions,
+        );
+
+        $json = json_decode($response->getBody(), false);
+
+        return new CampaignsResponse($json);
     }
 
     public function campaigns(array $ids = [], int $page = 1)

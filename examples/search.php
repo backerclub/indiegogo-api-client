@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Search API
+ * https://developer.indiegogo.com/docs/search
+ */
 require __DIR__ . '/../vendor/autoload.php';
 
 $auth = new \Indiegogo\Entity\Auth(
@@ -10,5 +13,8 @@ $auth = new \Indiegogo\Entity\Auth(
 
 $indiegogo = new \Indiegogo\Client($auth);
 
-// If you pass an array of campaign IDs, it does not return back a pagination property in the response....
-$campaigns = $indiegogo->campaigns([2596066]);
+$params = [
+
+];
+
+$campaigns = $indiegogo->search($params);

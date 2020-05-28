@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Indiegogo\Response;
-
 
 use Indiegogo\Entity\AccountContribution;
 

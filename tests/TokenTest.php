@@ -1,4 +1,5 @@
 <?php
+
 namespace Indiegogo\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
@@ -7,7 +8,7 @@ use Indiegogo\Entity\Token;
 
 class TokenTest extends ClientTestCase
 {
-    public function test_token_request_returns_token_object()
+    public function testTokenRequestReturnsTokenObject()
     {
         // Setup response to a successful access token request.
         $mock = new MockHandler([
@@ -22,5 +23,4 @@ class TokenTest extends ClientTestCase
         // We expect a Token object in response.
         $this->assertInstanceOf(Token::class, $token);
     }
-
 }

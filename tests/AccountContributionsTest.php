@@ -7,7 +7,7 @@ use GuzzleHttp\Psr7\Response;
 
 class AccountContributionsTest extends ClientTestCase
 {
-    public function test_accountContributions_request_returns_accountContributionsResponse_object()
+    public function testAccountContributionsRequestReturnsAccountContributionsResponseObject()
     {
         $mock = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . '/fixtures/account_contributions.json')),
@@ -19,5 +19,4 @@ class AccountContributionsTest extends ClientTestCase
 
         $this->assertInstanceOf(\Indiegogo\Response\AccountContributionsResponse::class, $accountContributionsResponse);
     }
-
 }

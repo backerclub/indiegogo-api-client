@@ -108,5 +108,4 @@ class Token extends AbstractEntity
     {
         $this->createdAt = $createdAt;
     }
-
 }

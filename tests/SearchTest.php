@@ -5,17 +5,17 @@ namespace Indiegogo\Tests;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
-class CampaignsTest extends ClientTestCase
+class SearchTest extends ClientTestCase
 {
-    public function testCampaignsRequestReturnsCampaignsResponseObject()
+    public function testSearchRequestReturnsCampaignsResponseResult()
     {
         $mock = new MockHandler([
-            new Response(200, [], file_get_contents(__DIR__ . '/fixtures/campaigns.json')),
+            new Response(200, [], file_get_contents(__DIR__ . '/fixtures/search.json')),
         ]);
 
         $indiegogo = $this->createIndiegogoClient($mock);
 
-        $campaignsResponse = $indiegogo->campaigns();
+        $campaignsResponse = $indiegogo->search();
 
         $this->assertInstanceOf(\Indiegogo\Response\CampaignsResponse::class, $campaignsResponse);
     }

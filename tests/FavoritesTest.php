@@ -1,4 +1,5 @@
 <?php
+
 namespace Indiegogo\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
@@ -6,7 +7,7 @@ use GuzzleHttp\Psr7\Response;
 
 class FavoritesTest extends ClientTestCase
 {
-    public function test_favorites_request_returns_campaignsResponse_object()
+    public function testFavoritesRequestReturnsCampaignsResponseObject()
     {
         $mock = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . '/fixtures/favorites.json')),
@@ -18,5 +19,4 @@ class FavoritesTest extends ClientTestCase
 
         $this->assertInstanceOf(\Indiegogo\Response\CampaignsResponse::class, $favoritesResponse);
     }
-
 }
