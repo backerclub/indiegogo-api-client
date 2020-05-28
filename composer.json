@@ -2,6 +2,7 @@
   "name": "backerclub/indiegogo",
   "type": "library",
   "description": "Unofficial Indiegogo Client",
+  "license": "MIT",
   "keywords": [
     "indiegogo",
     "api",
