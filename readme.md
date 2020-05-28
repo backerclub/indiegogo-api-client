@@ -1,4 +1,4 @@
-# Indiegogo Scraper
+# Indiegogo API Client 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/backerclub/indiegogo.svg?style=flat-square)](https://packagist.org/packages/backerclub/indiegogo)
 ![](https://github.com/backerclub/indiegogo/workflows/Run%20Tests/badge.svg?branch=master)
 [![StyleCI](https://styleci.io/repos/267051210/shield)](https://styleci.io/repos/267051210)
