@@ -14,6 +14,7 @@ class Perk extends AbstractEntity
     private int $numberAvailable;
     private \DateTime $estimatedDeliveryDate;
     private bool $shippingAddressRequired;
+    private string $label;
     private $validationErrors;
     private bool $featured;
     private int $nonTaxDeductibleAmount = 0;
@@ -151,6 +152,22 @@ class Perk extends AbstractEntity
     public function setShippingAddressRequired(bool $shippingAddressRequired): void
     {
         $this->shippingAddressRequired = $shippingAddressRequired;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLabel(): string
+    {
+        return $this->label;
+    }
+
+    /**
+     * @param string $label
+     */
+    public function setLabel(string $label): void
+    {
+        $this->label = $label;
     }
 
     /**
