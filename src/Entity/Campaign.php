@@ -324,6 +324,16 @@ class Campaign extends AbstractEntity
         $this->fundingType = $fundingType;
     }
 
+    public function isFixedFundingType(): bool
+    {
+        return ($this->getFundingType() === "fixed");
+    }
+
+    public function isFlexibleFundingType(): bool
+    {
+        return ($this->getFundingType() === "flexible");
+    }
+
     /**
      * @return string
      */
