@@ -107,6 +107,29 @@ class Perk extends AbstractEntity
     }
 
     /**
+     * Is the quantity of this perk limited?
+     * If numberAvailable is not set then this perk has unlimited quantity available.
+     *
+     * @return bool
+     */
+    public function hasLimitedAvailability(): bool
+    {
+        return isset($this->numberAvailable);
+    }
+
+    /**
+     * The remaining quantity of this perk that's available (max - claimed)
+     *
+     * @return int
+     */
+    public function getRemainingAvailable(): int
+    {
+        return $this->getNumberAvailable() - $this->getNumberClaimed();
+    }
+
+    /**
+     * The Maximum quantity of this perk that's available (claimed + unclaimed)
+     *
      * @return int
      */
     public function getNumberAvailable(): int
