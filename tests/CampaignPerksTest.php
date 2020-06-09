@@ -34,4 +34,17 @@ class CampaignPerksTest extends ClientTestCase
             );
         }
     }
+
+    public function testHasLimitedAvailability()
+    {
+        $campaignPerksResponseJson = json_decode(file_get_contents(__DIR__ . '/fixtures/campaign_perks.json'));
+        $campaignPerksResponse = new CampaignPerksResponse($campaignPerksResponseJson);
+        $campaignPerks = $campaignPerksResponse->getResponse();
+
+        // We know the fixture for the first perk has unlimited availability.
+        $this->assertFalse($campaignPerks[0]->hasLimitedAvailability());
+
+        // and the second perk fixture has limited availability.
+        $this->assertTrue($campaignPerks[1]->hasLimitedAvailability());
+    }
 }
