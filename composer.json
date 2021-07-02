@@ -1,5 +1,5 @@
 {
-  "name": "backerclub/indiegogo",
+  "name": "backerclub/indiegogo-api-client",
   "type": "library",
   "description": "Unofficial Indiegogo Client",
   "license": "MIT",
