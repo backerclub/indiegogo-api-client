@@ -2,8 +2,9 @@
 
 namespace BackerClub\IndiegogoApiClient;
 
-use DateTime;
+use DateTimeInterface;
 use JsonSerializable;
+use Throwable;
 
 abstract class AbstractEntity implements JsonSerializable
 {
@@ -16,18 +17,46 @@ abstract class AbstractEntity implements JsonSerializable
 
     public function toArray(): array
     {
-        $data = call_user_func('get_object_vars', $this);
+        $getterMethods = array_filter(
+            get_class_methods($this),
+            fn(string $method) => str_starts_with($method, 'get') && $method !== 'getSetterMethod'
+        );
 
-        foreach ($data as $key => $value) {
-            if ($value instanceof DateTime) {
-                $data[$key] = $value->format('Y-m-d H:i:s');
+        $data = [];
+
+        foreach ($getterMethods as $getterMethod) {
+            $key = lcfirst(str_replace('get', '', $getterMethod));
+
+            try {
+                // This will throw an exception if the object's property hasn't been initialized yet,
+                // which happens when we skip setting null values (see self::hydrate() method).
+                $value = $this->{$getterMethod}();
+            } catch (Throwable $exception) {
+                $value = null;
             }
+
+            if ($value instanceof DateTimeInterface) {
+                $data[$key] = $value->format(DateTimeInterface::ATOM);
+                continue;
+            }
+
+            if ($value instanceof self) {
+                $data[$key] = $value->toArray();
+                continue;
+            }
+
+            if (is_array($value) && count($value) > 0 && $value[0] instanceof self) {
+                $data[$key] = array_map(fn($innerValue) => $innerValue->toArray(), $value);
+                continue;
+            }
+
+            $data[$key] = $value;
         }
 
         return $data;
     }
 
-    public function hydrate(object $options)
+    public function hydrate(object $options): static
     {
         $methods = get_class_methods($this);
 
@@ -46,15 +75,12 @@ abstract class AbstractEntity implements JsonSerializable
         return $this;
     }
 
-    /**
-     * @return array
-     */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return $this->toArray();
     }
 
-    private function getSetterMethod($propertyName)
+    private function getSetterMethod($propertyName): string
     {
         return "set" . str_replace(' ', '', ucwords(str_replace('_', ' ', $propertyName)));
     }

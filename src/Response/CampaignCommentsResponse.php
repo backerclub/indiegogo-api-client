@@ -14,9 +14,6 @@ class CampaignCommentsResponse extends PaginatedResponse
         return $this->response;
     }
 
-    /**
-     * @param array $response
-     */
     public function setResponse(array $response): void
     {
         $this->response = [];

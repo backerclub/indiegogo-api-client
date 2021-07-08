@@ -13,6 +13,7 @@ use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
 use BackerClub\IndiegogoApiClient\Response\CampaignUpdatesResponse;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use Psr\Http\Message\ResponseInterface;
 
 class IndiegogoClient
 {
@@ -26,12 +27,6 @@ class IndiegogoClient
 
     private Token $token;
 
-    /**
-     * Client constructor.
-     *
-     * @param Auth                 $auth
-     * @param ClientInterface|null $httpClient
-     */
     public function __construct(Auth $auth, Token $token = null, ClientInterface $httpClient = null)
     {
         $this->auth = $auth;
@@ -49,13 +44,10 @@ class IndiegogoClient
 
     /**
      * Search API
-     * https://developer.indiegogo.com/docs/search
      *
-     * @param array $params
-     * @param int   $page
-     * @return CampaignsResponse
+     * @link https://developer.indiegogo.com/docs/search
      */
-    public function search(array $params = [], $page = 1)
+    public function search(array $params = [], int $page = 1): CampaignsResponse
     {
         $requestOptions = [
             'query' => ['page' => $page],
@@ -78,7 +70,7 @@ class IndiegogoClient
         return new CampaignsResponse($json);
     }
 
-    public function campaigns(array $ids = [], int $page = 1)
+    public function campaigns(array $ids = [], int $page = 1): CampaignsResponse
     {
         $requestOptions = [
             'query' => ['page' => $page],
@@ -101,7 +93,7 @@ class IndiegogoClient
         return new CampaignsResponse($json);
     }
 
-    public function credentials()
+    public function credentials(): Credentials
     {
         $response = $this->request(
             'GET',
@@ -113,7 +105,7 @@ class IndiegogoClient
         return new Credentials($json->response);
     }
 
-    public function accountContributions(int $accountId, int $page = 1)
+    public function accountContributions(int $accountId, int $page = 1): AccountContributionsResponse
     {
         $response = $this->request(
             'GET',
@@ -126,7 +118,7 @@ class IndiegogoClient
         return new AccountContributionsResponse($json);
     }
 
-    public function account(int $accountId)
+    public function account(int $accountId): Account
     {
         $response = $this->request(
             'GET',
@@ -138,7 +130,7 @@ class IndiegogoClient
         return new Account($json->response);
     }
 
-    public function campaignComments(int $campaignId, int $page = 1)
+    public function campaignComments(int $campaignId, int $page = 1): CampaignCommentsResponse
     {
         $response = $this->request(
             'GET',
@@ -151,7 +143,7 @@ class IndiegogoClient
         return new CampaignCommentsResponse($json);
     }
 
-    public function campaignPerks(int $campaignId)
+    public function campaignPerks(int $campaignId): CampaignPerksResponse
     {
         $response = $this->request(
             'GET',
@@ -163,7 +155,7 @@ class IndiegogoClient
         return new CampaignPerksResponse($json);
     }
 
-    public function campaignUpdates(int $campaignId, int $page = 1)
+    public function campaignUpdates(int $campaignId, int $page = 1): CampaignUpdatesResponse
     {
         $response = $this->request(
             'GET',
@@ -176,7 +168,7 @@ class IndiegogoClient
         return new CampaignUpdatesResponse($json);
     }
 
-    public function favorites(int $page = 1)
+    public function favorites(int $page = 1): CampaignsResponse
     {
         $response = $this->request(
             'GET',
@@ -189,7 +181,7 @@ class IndiegogoClient
         return new CampaignsResponse($json);
     }
 
-    public function recommendations(int $page = 1)
+    public function recommendations(int $page = 1): CampaignsResponse
     {
         $response = $this->request(
             'GET',
@@ -202,7 +194,7 @@ class IndiegogoClient
         return new CampaignsResponse($json);
     }
 
-    public function tokenRequest()
+    public function tokenRequest(): Token
     {
         $response = $this->httpClient->request(
             'POST',
@@ -217,10 +209,10 @@ class IndiegogoClient
             ]
         );
 
-        return new Token(json_decode($response->getBody()));
+        return new Token(json_decode($response->getBody(), false));
     }
 
-    private function request(string $method, $path, $options = [])
+    private function request(string $method, string $path, array $options = []): ResponseInterface
     {
         if (!isset($this->token) || $this->token->isExpired()) {
             $this->token = $this->tokenRequest();
@@ -230,10 +222,10 @@ class IndiegogoClient
             $options['query'] = [];
         }
 
-        $options['query'] += [
+        $options['query'] = array_merge($options['query'], [
             'api_token'    => $this->auth->getApiToken(),
             'access_token' => $this->token->getAccessToken(),
-        ];
+        ]);
 
         return $this->httpClient->request(
             $method,
