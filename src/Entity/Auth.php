@@ -15,25 +15,16 @@ class Auth
         $this->apiToken = $apiToken;
     }
 
-    /**
-     * @return string
-     */
     public function getEmail(): string
     {
         return $this->email;
     }
 
-    /**
-     * @return string
-     */
     public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * @return string
-     */
     public function getApiToken(): string
     {
         return $this->apiToken;

@@ -10,40 +10,28 @@ class Sku extends AbstractEntity
     private string $code;
     private array  $choices;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
     public function setId(int $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
     /**
-     * @return array
+     * @return Choice[]
      */
     public function getChoices(): array
     {
@@ -51,14 +39,15 @@ class Sku extends AbstractEntity
     }
 
     /**
-     * @param array $choices
+     * @param array|object[]|Choice[] $choices
      */
     public function setChoices(array $choices): void
     {
-        $this->choices = [];
-
-        foreach ($choices as $choice) {
-            $this->choices[] = new Choice($choice);
-        }
+        $this->choices = array_map(
+            fn($choice) => $choice instanceof Choice
+                ? $choice
+                : new Choice((object)$choice),
+            $choices
+        );
     }
 }

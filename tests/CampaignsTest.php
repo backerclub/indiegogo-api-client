@@ -3,6 +3,8 @@
 namespace BackerClub\IndiegogoApiClient\Tests;
 
 use BackerClub\IndiegogoApiClient\Entity\Campaign;
+use BackerClub\IndiegogoApiClient\Entity\CampaignUpdate;
+use BackerClub\IndiegogoApiClient\Entity\TeamMember;
 use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
@@ -20,6 +22,23 @@ class CampaignsTest extends ClientTestCase
         $campaignsResponse = $indiegogo->campaigns();
 
         $this->assertInstanceOf(CampaignsResponse::class, $campaignsResponse);
+    }
+
+    public function testCampaignLatestUpdatesAndTeamMembersAreEntityObjects()
+    {
+        $mock = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . '/fixtures/campaigns.json')),
+        ]);
+
+        $indiegogo = $this->createIndiegogoClient($mock);
+
+        $campaignsResponse = $indiegogo->campaigns();
+
+        $firstCampaign = $campaignsResponse->getResponse()[0];
+
+        $this->assertInstanceOf(Campaign::class, $firstCampaign);
+        $this->assertInstanceOf(CampaignUpdate::class, $firstCampaign->getLatestUpdates()[0]);
+        $this->assertInstanceOf(TeamMember::class, $firstCampaign->getTeamMembers()[0]);
     }
 
     public function testCampaignIsFixedFundingType()

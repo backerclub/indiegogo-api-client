@@ -9,24 +9,18 @@ class Order extends AbstractEntity
     private int   $id;
     private array $perks;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
     public function setId(int $id): void
     {
         $this->id = $id;
     }
 
     /**
-     * @return array
+     * @return Perk[]
      */
     public function getPerks(): array
     {
@@ -34,13 +28,15 @@ class Order extends AbstractEntity
     }
 
     /**
-     * @param array $perks
+     * @param array|object[]|Perk[] $perks
      */
     public function setPerks(array $perks): void
     {
-        $this->perks = [];
-        foreach ($perks as $perk) {
-            $this->perks[] = new Perk($perk);
-        }
+        $this->perks = array_map(
+            fn($perk) => $perk instanceof Perk
+                ? $perk
+                : new Perk((object)$perk),
+            $perks
+        );
     }
 }
