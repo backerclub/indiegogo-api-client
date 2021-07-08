@@ -68,6 +68,16 @@ class IndiegogoClient
         return $this->httpClient;
     }
 
+    public function getApiUrl(): string
+    {
+        return $this->apiUrl;
+    }
+
+    public function getTokenRequestUrl(): string
+    {
+        return $this->tokenRequestUrl;
+    }
+
     /**
      * Search API
      *
