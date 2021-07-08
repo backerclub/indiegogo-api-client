@@ -25,21 +25,47 @@ class IndiegogoClient
 
     private ClientInterface $httpClient;
 
-    private Token $token;
+    private ?Token $token = null;
 
     public function __construct(Auth $auth, Token $token = null, ClientInterface $httpClient = null)
     {
+        $this->setAuth($auth);
+        $this->setToken($token);
+        $this->setHttpClient($httpClient);
+    }
+
+    public function setAuth(Auth $auth): void
+    {
         $this->auth = $auth;
+    }
 
-        if (!is_null($token)) {
-            $this->token = $token;
-        }
+    public function getAuth(): Auth
+    {
+        return $this->auth;
+    }
 
-        if (is_null($httpClient)) {
+    public function setToken(?Token $token): void
+    {
+        $this->token = $token;
+    }
+
+    public function getToken(): ?Token
+    {
+        return $this->token;
+    }
+
+    public function setHttpClient(?ClientInterface $client): void
+    {
+        if (is_null($client)) {
             $this->httpClient = new Client();
         } else {
-            $this->httpClient = $httpClient;
+            $this->httpClient = $client;
         }
+    }
+
+    public function getHttpClient(): ClientInterface
+    {
+        return $this->httpClient;
     }
 
     /**
@@ -196,15 +222,15 @@ class IndiegogoClient
 
     public function tokenRequest(): Token
     {
-        $response = $this->httpClient->request(
+        $response = $this->getHttpClient()->request(
             'POST',
             $this->tokenRequestUrl,
             [
                 'form_params' => [
                     'grant_type'      => 'password',
                     'credential_type' => 'email',
-                    'email'           => $this->auth->getEmail(),
-                    'password'        => $this->auth->getPassword(),
+                    'email'           => $this->getAuth()->getEmail(),
+                    'password'        => $this->getAuth()->getPassword(),
                 ],
             ]
         );
@@ -214,8 +240,8 @@ class IndiegogoClient
 
     private function request(string $method, string $path, array $options = []): ResponseInterface
     {
-        if (!isset($this->token) || $this->token->isExpired()) {
-            $this->token = $this->tokenRequest();
+        if (!$this->getToken() || $this->getToken()->isExpired()) {
+            $this->setToken($this->tokenRequest());
         }
 
         if (!isset($options['query'])) {
@@ -223,11 +249,11 @@ class IndiegogoClient
         }
 
         $options['query'] = array_merge($options['query'], [
-            'api_token'    => $this->auth->getApiToken(),
-            'access_token' => $this->token->getAccessToken(),
+            'api_token'    => $this->getAuth()->getApiToken(),
+            'access_token' => $this->getToken()->getAccessToken(),
         ]);
 
-        return $this->httpClient->request(
+        return $this->getHttpClient()->request(
             $method,
             $path,
             $options
