@@ -1,8 +1,11 @@
 <?php
 
-namespace Indiegogo;
+namespace BackerClub\IndiegogoApiClient;
 
-abstract class AbstractEntity implements \JsonSerializable
+use DateTime;
+use JsonSerializable;
+
+abstract class AbstractEntity implements JsonSerializable
 {
     public function __construct(object $data = null)
     {
@@ -16,7 +19,7 @@ abstract class AbstractEntity implements \JsonSerializable
         $data = call_user_func('get_object_vars', $this);
 
         foreach ($data as $key => $value) {
-            if ($value instanceof \DateTime) {
+            if ($value instanceof DateTime) {
                 $data[$key] = $value->format('Y-m-d H:i:s');
             }
         }

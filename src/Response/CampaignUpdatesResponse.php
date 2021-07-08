@@ -1,8 +1,8 @@
 <?php
 
-namespace Indiegogo\Response;
+namespace BackerClub\IndiegogoApiClient\Response;
 
-use Indiegogo\Entity\CampaignUpdate;
+use BackerClub\IndiegogoApiClient\Entity\CampaignUpdate;
 
 class CampaignUpdatesResponse extends PaginatedResponse
 {

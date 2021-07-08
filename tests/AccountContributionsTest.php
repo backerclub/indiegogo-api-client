@@ -1,7 +1,8 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Response\AccountContributionsResponse;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
@@ -17,6 +18,6 @@ class AccountContributionsTest extends ClientTestCase
 
         $accountContributionsResponse = $indiegogo->accountContributions(12345);
 
-        $this->assertInstanceOf(\Indiegogo\Response\AccountContributionsResponse::class, $accountContributionsResponse);
+        $this->assertInstanceOf(AccountContributionsResponse::class, $accountContributionsResponse);
     }
 }

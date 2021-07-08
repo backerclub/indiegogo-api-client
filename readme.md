@@ -16,15 +16,16 @@ composer require backerclub/indiegogo
 ``` 
 
 Create the Indiegogo client by passing in a well formed Auth object and call the method you desire to get results for.
+
 ```php
 <?php
-$auth = new \Indiegogo\Entity\Auth(
+$auth = new \BackerClub\IndiegogoApiClient\Entity\Auth(
     'email@example.com',
     'password-goes-here',
     'api-token-goes-here'
 );
 
-$indiegogo = new \Indiegogo\Client($auth);
+$indiegogo = new \BackerClub\IndiegogoApiClient\IndiegogoClient($auth);
 
 $campaigns = $indiegogo->campaigns();
 ```

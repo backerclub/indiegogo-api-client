@@ -1,45 +1,46 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
+use DateTime;
 
 class Campaign extends AbstractEntity
 {
-    private int $id;
+    private int    $id;
     private string $slug;
     private string $title;
     // $imageTypes
     private Currency $currency;
-    private \DateTime $createdAt;
-    private \DateTime $updatedAt;
-    private string $tagline;
-    private int $fundingDays;
-    private string $baseballCardImageUrl;
-    private string $city;
-    private bool $foreverFundingActive;
-    private bool $stripePayoutActive;
-    private int $goal;
-    private bool $perksAvailable;
+    private DateTime $createdAt;
+    private DateTime $updatedAt;
+    private string   $tagline;
+    private int      $fundingDays;
+    private string   $baseballCardImageUrl;
+    private string   $city;
+    private bool     $foreverFundingActive;
+    private bool     $stripePayoutActive;
+    private int      $goal;
+    private bool     $perksAvailable;
     private Category $category;
-    private int $collectedFunds;
-    private string $fundingType;
-    private string $countryCodeAlpha2;
-    private string $region;
-    private string $regionCode;
-    private int $contributionsCount;
-    private int $commentsCount;
-    private int $updatesCount;
-    private \DateTime $fundingEndsAt;
-    private \DateTime $fundingStartedAt;
-    private string $webUrl;
-    private bool $favorited;
-    private int $foreverFundingCollectedFunds;
-    private \DateTime $foreverFundingEndsAt;
-    private string $videoOverlayUrl;
-    private string $mainImageUrl;
-    private string $mainVideoUrl;
-    private string $facebookUrl;
+    private int      $collectedFunds;
+    private string   $fundingType;
+    private string   $countryCodeAlpha2;
+    private string   $region;
+    private string   $regionCode;
+    private int      $contributionsCount;
+    private int      $commentsCount;
+    private int      $updatesCount;
+    private DateTime $fundingEndsAt;
+    private DateTime $fundingStartedAt;
+    private string   $webUrl;
+    private bool     $favorited;
+    private int      $foreverFundingCollectedFunds;
+    private DateTime $foreverFundingEndsAt;
+    private string   $videoOverlayUrl;
+    private string   $mainImageUrl;
+    private string   $mainVideoUrl;
+    private string   $facebookUrl;
     // life
     private string $productStage;
     /**
@@ -117,9 +118,9 @@ class Campaign extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
@@ -129,13 +130,13 @@ class Campaign extends AbstractEntity
      */
     public function setCreatedAt(string $createdAt): void
     {
-        $this->createdAt = new \DateTime($createdAt);
+        $this->createdAt = new DateTime($createdAt);
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getUpdatedAt(): \DateTime
+    public function getUpdatedAt(): DateTime
     {
         return $this->updatedAt;
     }
@@ -145,7 +146,7 @@ class Campaign extends AbstractEntity
      */
     public function setUpdatedAt(string $updatedAt): void
     {
-        $this->updatedAt = new \DateTime($updatedAt);
+        $this->updatedAt = new DateTime($updatedAt);
     }
 
     /**
@@ -431,9 +432,9 @@ class Campaign extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getFundingEndsAt(): \DateTime
+    public function getFundingEndsAt(): DateTime
     {
         return $this->fundingEndsAt;
     }
@@ -443,13 +444,13 @@ class Campaign extends AbstractEntity
      */
     public function setFundingEndsAt(string $fundingEndsAt): void
     {
-        $this->fundingEndsAt = new \DateTime($fundingEndsAt);
+        $this->fundingEndsAt = new DateTime($fundingEndsAt);
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getFundingStartedAt(): \DateTime
+    public function getFundingStartedAt(): DateTime
     {
         return $this->fundingStartedAt;
     }
@@ -459,7 +460,7 @@ class Campaign extends AbstractEntity
      */
     public function setFundingStartedAt(string $fundingStartedAt): void
     {
-        $this->fundingStartedAt = new \DateTime($fundingStartedAt);
+        $this->fundingStartedAt = new DateTime($fundingStartedAt);
     }
 
     /**
@@ -511,9 +512,9 @@ class Campaign extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getForeverFundingEndsAt(): \DateTime
+    public function getForeverFundingEndsAt(): DateTime
     {
         return $this->foreverFundingEndsAt;
     }
@@ -523,7 +524,7 @@ class Campaign extends AbstractEntity
      */
     public function setForeverFundingEndsAt(string $foreverFundingEndsAt): void
     {
-        $this->foreverFundingEndsAt = new \DateTime($foreverFundingEndsAt);
+        $this->foreverFundingEndsAt = new DateTime($foreverFundingEndsAt);
     }
 
     /**

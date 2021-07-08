@@ -1,10 +1,10 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Entity\Token;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Indiegogo\Entity\Token;
 
 class TokenTest extends ClientTestCase
 {

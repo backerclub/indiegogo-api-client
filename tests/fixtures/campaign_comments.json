@@ -1,486 +1,671 @@
 {
-  "response": [
-    {
-      "id": 2380302,
-      "created_at": "2014-08-07T12:54:10-07:00",
-      "text": "TrackR bravo ships January 7th",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2380301,
-      "created_at": "2014-08-07T12:53:44-07:00",
-      "text": "Bob, sent you a note.",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2380300,
-      "created_at": "2014-08-07T12:53:33-07:00",
-      "text": "individual packaging is possible",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2379995,
-      "created_at": "2014-08-07T11:48:42-07:00",
-      "text": "I have watched more than five people click on my Facebook link  the first week and then again last week.  And I still have not been put on the free color upgrade list.  I have contacted customer service with no help.
-      Now I realize that this is only a $5 item but a deal is a deal and I want to be able to pick out my colors for the 10 pack with engraving I ordered.",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8021565,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "http://graph.facebook.com/100001455817883/picture?width=200",
-        "name": ""
-      }
-    },
-    {
-      "id": 2379815,
-      "created_at": "2014-08-07T10:14:23-07:00",
-      "text": "When are we likely to receive it living in the UK?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 5075728,
-        "firstname": "Ben",
-        "lastname": "Clark",
-        "avatar_url": "http://graph.facebook.com/663943632/picture?width=200",
-        "name": "Ben Clark"
-      }
-    },
-    {
-      "id": 2379583,
-      "created_at": "2014-08-07T08:58:06-07:00",
-      "text": "An exciting product. We look forward to continued success.",
-      "from_the_team": false,
-      "owner_type": "",
-      "private": false,
-      "account": {
-        "id": 8381093,
-        "firstname": "Kittredge",
-        "lastname": "Seely",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Kittredge Seely"
-      }
-    },
-    {
-      "id": 2378969,
-      "created_at": "2014-08-07T06:34:01-07:00",
-      "text": "Just donate another 5 to get the 10 devices perk. I originally had the 5 devices perk. Your campaign is awesome!",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8309151,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": ""
-      }
-    },
-    {
-      "id": 2378775,
-      "created_at": "2014-08-07T05:12:31-07:00",
-      "text": "This will be in addition to my other purchase I plan to sell this out of my coffee shop
-      thanks
-      Ed",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 5177434,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": ""
-      }
-    },
-    {
-      "id": 2378769,
-      "created_at": "2014-08-07T05:05:47-07:00",
-      "text": "Hi, i forgot to add $10 for international shipping.. how can i pay that??
+    "response": [
+        {
+            "id": 2380302,
+            "created_at": "2014-08-07T12:54:10-07:00",
+            "text": "TrackR bravo ships January 7th",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2380301,
+            "created_at": "2014-08-07T12:53:44-07:00",
+            "text": "Bob, sent you a note.",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2380300,
+            "created_at": "2014-08-07T12:53:33-07:00",
+            "text": "individual packaging is possible",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2379995,
+            "created_at": "2014-08-07T11:48:42-07:00",
+            "text": "I have watched more than five people click on my Facebook link  the first week and then again last week.  And I still have not been put on the free color upgrade list.  I have contacted customer service with no help.
+            Now
+            I
+            realize
+            that
+            this
+            is
+            only
+            a
+            $5
+            item
+            but
+            a
+            deal
+            is
+            a
+            deal
+            and
+            I
+            want
+            to
+            be
+            able
+            to
+            pick
+            out
+            my
+            colors
+            for
+            the
+            10
+            pack
+            with
+            engraving
+            I
+            ordered.
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8021565,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "http://graph.facebook.com/100001455817883/picture?width=200",
+                "name": ""
+            }
+        },
+        {
+            "id": 2379815,
+            "created_at": "2014-08-07T10:14:23-07:00",
+            "text": "When are we likely to receive it living in the UK?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 5075728,
+                "firstname": "Ben",
+                "lastname": "Clark",
+                "avatar_url": "http://graph.facebook.com/663943632/picture?width=200",
+                "name": "Ben Clark"
+            }
+        },
+        {
+            "id": 2379583,
+            "created_at": "2014-08-07T08:58:06-07:00",
+            "text": "An exciting product. We look forward to continued success.",
+            "from_the_team": false,
+            "owner_type": "",
+            "private": false,
+            "account": {
+                "id": 8381093,
+                "firstname": "Kittredge",
+                "lastname": "Seely",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Kittredge Seely"
+            }
+        },
+        {
+            "id": 2378969,
+            "created_at": "2014-08-07T06:34:01-07:00",
+            "text": "Just donate another 5 to get the 10 devices perk. I originally had the 5 devices perk. Your campaign is awesome!",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8309151,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": ""
+            }
+        },
+        {
+            "id": 2378775,
+            "created_at": "2014-08-07T05:12:31-07:00",
+            "text": "This will be in addition to my other purchase I plan to sell this out of my coffee shop
+            thanks
+            Ed
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 5177434,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": ""
+            }
+        },
+        {
+            "id": 2378769,
+            "created_at": "2014-08-07T05:05:47-07:00",
+            "text": "Hi, i forgot to add $10 for international shipping.. how can i pay that??
 
-      Regards!",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8236285,
-        "firstname": "Thiago",
-        "lastname": "Iwamoto",
-        "avatar_url": "http://graph.facebook.com/100001494345900/picture?width=200",
-        "name": "Thiago Iwamoto"
-      }
-    },
-    {
-      "id": 2378123,
-      "created_at": "2014-08-07T01:44:51-07:00",
-      "text": "Quick question:  Can 1 TrackR be synchronized to two smartphones, so that a husband and wife might both be able to track their pet, for example?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 838686,
-        "firstname": "Corey",
-        "lastname": "Wright",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Corey Wright"
-      }
-    },
-    {
-      "id": 2377686,
-      "created_at": "2014-08-06T22:41:20-07:00",
-      "text": "I want 5 out of 10 Trackr's to be engraved. I am not sure if I have to have the same engraved message on all or can I request different for each 5. Rest 5 are ok to be blank. Not sure where to request that. Can you pls advise?",
-      "from_the_team": false,
-      "owner_type": "",
-      "private": false,
-      "account": {
-        "id": 8334294,
-        "firstname": "Anupam",
-        "lastname": "Singhal",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Anupam Singhal"
-      }
-    },
-    {
-      "id": 2377665,
-      "created_at": "2014-08-06T22:30:32-07:00",
-      "text": "So i backed the 10 TrackR Bundle 109+10 for shipping and paid 5 for the color change. But now I want to get the 30 Trackr Bundle Do I just select no perk and add 216 as a contribution. Another thing Ive learn how to referral people and have 15+ what happens if ive already paid for the color change?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8373899,
-        "firstname": "Michael",
-        "lastname": "Cebriy",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Michael Cebriy"
-      }
-    },
-    {
-      "id": 2377616,
-      "created_at": "2014-08-06T21:33:52-07:00",
-      "text": "Cant Wait!",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8181210,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": ""
-      }
-    },
-    {
-      "id": 2377521,
-      "created_at": "2014-08-06T20:51:58-07:00",
-      "text": "i referred to my friends and facebook.
+            Regards!
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8236285,
+                "firstname": "Thiago",
+                "lastname": "Iwamoto",
+                "avatar_url": "http://graph.facebook.com/100001494345900/picture?width=200",
+                "name": "Thiago Iwamoto"
+            }
+        },
+        {
+            "id": 2378123,
+            "created_at": "2014-08-07T01:44:51-07:00",
+            "text": "Quick question:  Can 1 TrackR be synchronized to two smartphones, so that a husband and wife might both be able to track their pet, for example?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 838686,
+                "firstname": "Corey",
+                "lastname": "Wright",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Corey Wright"
+            }
+        },
+        {
+            "id": 2377686,
+            "created_at": "2014-08-06T22:41:20-07:00",
+            "text": "I want 5 out of 10 Trackr's to be engraved. I am not sure if I have to have the same engraved message on all or can I request different for each 5. Rest 5 are ok to be blank. Not sure where to request that. Can you pls advise?",
+            "from_the_team": false,
+            "owner_type": "",
+            "private": false,
+            "account": {
+                "id": 8334294,
+                "firstname": "Anupam",
+                "lastname": "Singhal",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Anupam Singhal"
+            }
+        },
+        {
+            "id": 2377665,
+            "created_at": "2014-08-06T22:30:32-07:00",
+            "text": "So i backed the 10 TrackR Bundle 109+10 for shipping and paid 5 for the color change. But now I want to get the 30 Trackr Bundle Do I just select no perk and add 216 as a contribution. Another thing Ive learn how to referral people and have 15+ what happens if ive already paid for the color change?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8373899,
+                "firstname": "Michael",
+                "lastname": "Cebriy",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Michael Cebriy"
+            }
+        },
+        {
+            "id": 2377616,
+            "created_at": "2014-08-06T21:33:52-07:00",
+            "text": "Cant Wait!",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8181210,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": ""
+            }
+        },
+        {
+            "id": 2377521,
+            "created_at": "2014-08-06T20:51:58-07:00",
+            "text": "i referred to my friends and facebook.
 
-      i hope you guys send me extra one :)",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8145036,
-        "firstname": "Ji",
-        "lastname": "Mcphee",
-        "avatar_url": "http://graph.facebook.com/1636590049/picture?width=200",
-        "name": "Ji Mcphee"
-      }
-    },
-    {
-      "id": 2377310,
-      "created_at": "2014-08-06T18:14:44-07:00",
-      "text": "Will there be a way to just purchase the pet tag accessory separately?   just curious because we travel and have purchased them for each of our cats.  so if they get out we will hopefully find them.  Yes, people they are collared and microchipped, but this would ad another level of protection.",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8376362,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "http://graph.facebook.com/1449906126/picture?width=200",
-        "name": ""
-      }
-    },
-    {
-      "id": 2377296,
-      "created_at": "2014-08-06T17:58:22-07:00",
-      "text": "So has it been mentioned that in the email we all received the section that the Free Color Upgrade takes us to a GoogleDocs that says "Earned Color Upgrade"
+            i
+            hope
+            you
+            guys
+            send
+            me
+            extra
+            one: )
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8145036,
+                "firstname": "Ji",
+                "lastname": "Mcphee",
+                "avatar_url": "http://graph.facebook.com/1636590049/picture?width=200",
+                "name": "Ji Mcphee"
+            }
+        },
+        {
+            "id": 2377310,
+            "created_at": "2014-08-06T18:14:44-07:00",
+            "text": "Will there be a way to just purchase the pet tag accessory separately?   just curious because we travel and have purchased them for each of our cats.  so if they get out we will hopefully find them.  Yes, people they are collared and microchipped, but this would ad another level of protection.",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8376362,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "http://graph.facebook.com/1449906126/picture?width=200",
+                "name": ""
+            }
+        },
+        {
+            "id": 2377296,
+            "created_at": "2014-08-06T17:58:22-07:00",
+            "text": "So has it been mentioned that in the email we all received the section that the Free Color Upgrade takes us to a GoogleDocs that says "
+            Earned
+            Color
+            Upgrade
+            "
 
-      .. but the section that the extra Free Device link takes us to a GoogleDocs that says "Earned Color Upgrade"?
+            ..
+            but
+            the
+            section
+            that
+            the
+            extra
+            Free
+            Device
+            link
+            takes
+            us
+            to
+            a
+            GoogleDocs
+            that
+            says
+            "Earned Color Upgrade"
+            ?
 
-      I went through my friend's referral link and I am getting pretty worried it did not work. Where can I find the actual link with the list?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8258260,
-        "firstname": null,
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": ""
-      }
-    },
-    {
-      "id": 2377244,
-      "created_at": "2014-08-06T17:13:46-07:00",
-      "text": "Hey Tsogtbayar Choi,
+            I
+            went
+            through
+            my
+            friend
+            's referral link and I am getting pretty worried it did not work. Where can I find the actual link with the list?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8258260,
+                "firstname": null,
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": ""
+            }
+        },
+        {
+            "id": 2377244,
+            "created_at": "2014-08-06T17:13:46-07:00",
+            "text": "Hey Tsogtbayar Choi,
 
-      You question is answered on the Main page near the bottom.. Here is the past of it:
+            You
+            question
+            is
+            answered
+            on
+            the
+            Main
+            page
+            near
+            the
+            bottom..
+            Here
+            is
+            the
+            past
+            of
+            it: Oops!
+            I
+            forgot
+            to
+            add
+            international
+            shipping!
+            What
+            should
+            I
+            do
+            ?
 
-    Oops! I forgot to add international shipping! What should I do?
-
-      Please contribute the shipping amount ($10) and select no perk. We will match your contributions.",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 7907291,
-        "firstname": "blaxtar0170",
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "blaxtar0170"
-      }
-    },
-    {
-      "id": 2377237,
-      "created_at": "2014-08-06T17:10:08-07:00",
-      "text": "hey Chris,
-      Seriously, you guys didnt answer that we forget to add international shipping 10$.
-      what should i do?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 6668084,
-        "firstname": "Tsogtbayar",
-        "lastname": "Choi",
-        "avatar_url": "http://graph.facebook.com/1122014434/picture?width=200",
-        "name": "Tsogtbayar Choi"
-      }
-    },
-    {
-      "id": 2377236,
-      "created_at": "2014-08-06T17:10:07-07:00",
-      "text": "Hey Chris,
-      That latest Update has a link for free color upgrade and free device, however, both the "HERE" links link to the same Color Upgrade spreadsheet.",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 7907291,
-        "firstname": "blaxtar0170",
-        "lastname": null,
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "blaxtar0170"
-      }
-    },
-    {
-      "id": 2377175,
-      "created_at": "2014-08-06T16:28:07-07:00",
-      "text": "@katy for the free device, they need to pledge at least for 1 TrackR bravo device",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2377174,
-      "created_at": "2014-08-06T16:27:33-07:00",
-      "text": "@nathan please pledge the difference and we'll match up the contributions",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2377127,
-      "created_at": "2014-08-06T15:50:02-07:00",
-      "text": "Hi.  I just supported for $109 for 10 w/engraving, but I also want the color upgrade, but I wasn't able to choose more than one perk. How do I do it ?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8346858,
-        "firstname": "Joseph",
-        "lastname": "DeMello",
-        "avatar_url": "http://graph.facebook.com/1019159073/picture?width=200",
-        "name": "Joseph DeMello"
-      }
-    },
-    {
-      "id": 2377072,
-      "created_at": "2014-08-06T15:05:03-07:00",
-      "text": "Hi Chris,
-      I have just added my $10 shipping. Also, for the referral, do they have to back you for a minimum amount - my dad was going to back but doesn't want a device himself - will that trigger a free one?
-      Cheers,
-      Katy",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8374715,
-        "firstname": "Katy",
-        "lastname": "Wilson",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Katy Wilson"
-      }
-    },
-    {
-      "id": 2377066,
-      "created_at": "2014-08-06T15:01:51-07:00",
-      "text": "Where do I indicate the custom laser engraving that I want?",
-      "from_the_team": false,
-      "owner_type": "",
-      "private": false,
-      "account": {
-        "id": 8374921,
-        "firstname": "Anne",
-        "lastname": "Law",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Anne Law"
-      }
-    },
-    {
-      "id": 2377038,
-      "created_at": "2014-08-06T14:43:58-07:00",
-      "text": "Hello Chris, I also forgot the $ 10 shipping cost. I would add. Is then so ok?",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 8290615,
-        "firstname": "",
-        "lastname": "",
-        "avatar_url": "https://images.indiegogo.com/individuals/8290615/pictures/thumbnail/20140731150212-IMG_5343.JPG?1406844134",
-        "name": ""
-      }
-    },
-    {
-      "id": 2376961,
-      "created_at": "2014-08-06T13:55:31-07:00",
-      "text": "As mentioned by Kevin_Trieu, both links in Update #53 appear to go to the Color Upgrade spreadsheet.",
-      "from_the_team": false,
-      "owner_type": "",
-      "private": false,
-      "account": {
-        "id": 7693147,
-        "firstname": "T",
-        "lastname": "W",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "T W"
-      }
-    },
-    {
-      "id": 2376797,
-      "created_at": "2014-08-06T13:32:44-07:00",
-      "text": "On the latest update (#53), the links to the color upgrade and extra device both go to the color upgrade list.",
-      "from_the_team": false,
-      "owner_type": "Contributor",
-      "private": false,
-      "account": {
-        "id": 4120228,
-        "firstname": "Kevin",
-        "lastname": "T",
-        "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
-        "name": "Kevin T"
-      }
-    },
-    {
-      "id": 2376708,
-      "created_at": "2014-08-06T13:26:31-07:00",
-      "text": "You can contribute again for $10 and select no perk. We'll match up the amounts",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
-    },
-    {
-      "id": 2376513,
-      "created_at": "2014-08-06T13:11:25-07:00",
-      "text": "I have forgot to add the 10$ for international shipping, is there a way to add them?",
-      "from_the_team": false,
-      "owner_type": "",
-      "private": false,
-      "account": {
-        "id": 8340646,
-        "firstname": "Sebastian",
-        "lastname": "Wolf",
-        "avatar_url": "http://graph.facebook.com/1171805517/picture?width=200",
-        "name": "Sebastian Wolf"
-      }
-    },
-    {
-      "id": 2376489,
-      "created_at": "2014-08-06T13:08:42-07:00",
-      "text": "We ship January 7th",
-      "from_the_team": true,
-      "owner_type": "Campaign Team",
-      "private": false,
-      "account": {
-        "id": 1677032,
-        "firstname": "Chris",
-        "lastname": "Herbert",
-        "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
-        "name": "Chris Herbert"
-      }
+            Please
+            contribute
+            the
+            shipping
+            amount
+            ($10)
+            and
+            select
+            no
+            perk.
+            We
+            will
+            match
+            your
+            contributions.
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 7907291,
+                "firstname": "blaxtar0170",
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "blaxtar0170"
+            }
+        },
+        {
+            "id": 2377237,
+            "created_at": "2014-08-06T17:10:08-07:00",
+            "text": "hey Chris,
+            Seriously,
+            you
+            guys
+            didnt
+            answer
+            that
+            we
+            forget
+            to
+            add
+            international
+            shipping
+            10$.
+            what
+            should
+            i
+            do
+            ?
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 6668084,
+                "firstname": "Tsogtbayar",
+                "lastname": "Choi",
+                "avatar_url": "http://graph.facebook.com/1122014434/picture?width=200",
+                "name": "Tsogtbayar Choi"
+            }
+        },
+        {
+            "id": 2377236,
+            "created_at": "2014-08-06T17:10:07-07:00",
+            "text": "Hey Chris,
+            That
+            latest
+            Update
+            has
+            a
+            link
+            for
+            free
+            color
+            upgrade
+            and
+            free
+            device,
+            however,
+            both
+            the
+            "HERE"
+            links
+            link
+            to
+            the
+            same
+            Color
+            Upgrade
+            spreadsheet.
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 7907291,
+                "firstname": "blaxtar0170",
+                "lastname": null,
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "blaxtar0170"
+            }
+        },
+        {
+            "id": 2377175,
+            "created_at": "2014-08-06T16:28:07-07:00",
+            "text": "@katy for the free device, they need to pledge at least for 1 TrackR bravo device",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2377174,
+            "created_at": "2014-08-06T16:27:33-07:00",
+            "text": "@nathan please pledge the difference and we'll match up the contributions",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2377127,
+            "created_at": "2014-08-06T15:50:02-07:00",
+            "text": "Hi.  I just supported for $109 for 10 w/engraving, but I also want the color upgrade, but I wasn't able to choose more than one perk. How do I do it ?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8346858,
+                "firstname": "Joseph",
+                "lastname": "DeMello",
+                "avatar_url": "http://graph.facebook.com/1019159073/picture?width=200",
+                "name": "Joseph DeMello"
+            }
+        },
+        {
+            "id": 2377072,
+            "created_at": "2014-08-06T15:05:03-07:00",
+            "text": "Hi Chris,
+            I
+            have
+            just
+            added
+            my
+            $10
+            shipping.
+            Also,
+            for
+            the
+            referral,
+            do
+            they
+            have
+            to
+            back
+            you
+            for
+            a
+            minimum
+            amount
+            -
+            my
+            dad
+            was
+            going
+            to
+            back
+            but
+            doesn
+            't want a device himself - will that trigger a free one?
+            Cheers,
+            Katy
+            ",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8374715,
+                "firstname": "Katy",
+                "lastname": "Wilson",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Katy Wilson"
+            }
+        },
+        {
+            "id": 2377066,
+            "created_at": "2014-08-06T15:01:51-07:00",
+            "text": "Where do I indicate the custom laser engraving that I want?",
+            "from_the_team": false,
+            "owner_type": "",
+            "private": false,
+            "account": {
+                "id": 8374921,
+                "firstname": "Anne",
+                "lastname": "Law",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Anne Law"
+            }
+        },
+        {
+            "id": 2377038,
+            "created_at": "2014-08-06T14:43:58-07:00",
+            "text": "Hello Chris, I also forgot the $ 10 shipping cost. I would add. Is then so ok?",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 8290615,
+                "firstname": "",
+                "lastname": "",
+                "avatar_url": "https://images.indiegogo.com/individuals/8290615/pictures/thumbnail/20140731150212-IMG_5343.JPG?1406844134",
+                "name": ""
+            }
+        },
+        {
+            "id": 2376961,
+            "created_at": "2014-08-06T13:55:31-07:00",
+            "text": "As mentioned by Kevin_Trieu, both links in Update #53 appear to go to the Color Upgrade spreadsheet.",
+            "from_the_team": false,
+            "owner_type": "",
+            "private": false,
+            "account": {
+                "id": 7693147,
+                "firstname": "T",
+                "lastname": "W",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "T W"
+            }
+        },
+        {
+            "id": 2376797,
+            "created_at": "2014-08-06T13:32:44-07:00",
+            "text": "On the latest update (#53), the links to the color upgrade and extra device both go to the color upgrade list.",
+            "from_the_team": false,
+            "owner_type": "Contributor",
+            "private": false,
+            "account": {
+                "id": 4120228,
+                "firstname": "Kevin",
+                "lastname": "T",
+                "avatar_url": "https://g0.iggcdn.com/assets/individuals/missing/thumbnail-1e60e0977054c7219782b694da9d2677.png",
+                "name": "Kevin T"
+            }
+        },
+        {
+            "id": 2376708,
+            "created_at": "2014-08-06T13:26:31-07:00",
+            "text": "You can contribute again for $10 and select no perk. We'll match up the amounts",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        },
+        {
+            "id": 2376513,
+            "created_at": "2014-08-06T13:11:25-07:00",
+            "text": "I have forgot to add the 10$ for international shipping, is there a way to add them?",
+            "from_the_team": false,
+            "owner_type": "",
+            "private": false,
+            "account": {
+                "id": 8340646,
+                "firstname": "Sebastian",
+                "lastname": "Wolf",
+                "avatar_url": "http://graph.facebook.com/1171805517/picture?width=200",
+                "name": "Sebastian Wolf"
+            }
+        },
+        {
+            "id": 2376489,
+            "created_at": "2014-08-06T13:08:42-07:00",
+            "text": "We ship January 7th",
+            "from_the_team": true,
+            "owner_type": "Campaign Team",
+            "private": false,
+            "account": {
+                "id": 1677032,
+                "firstname": "Chris",
+                "lastname": "Herbert",
+                "avatar_url": "http://graph.facebook.com/3604939/picture?width=200",
+                "name": "Chris Herbert"
+            }
+        }
+    ],
+    "count": 30,
+    "pagination": {
+        "previous": null,
+        "next": 2,
+        "current": 1,
+        "per_page": 30,
+        "count": 946,
+        "pages": 32
     }
-  ],
-  "count": 30,
-  "pagination": {
-    "previous": null,
-    "next": 2,
-    "current": 1,
-    "per_page": 30,
-    "count": 946,
-    "pages": 32
-  }
 }

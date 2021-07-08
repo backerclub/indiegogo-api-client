@@ -1,15 +1,15 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 class Item extends AbstractEntity
 {
-    private int $id;
+    private int    $id;
     private string $name;
-    private int $quantity;
-    private Sku $sku;
+    private int    $quantity;
+    private Sku    $sku;
 
     /**
      * @return int

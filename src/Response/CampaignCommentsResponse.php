@@ -1,8 +1,8 @@
 <?php
 
-namespace Indiegogo\Response;
+namespace BackerClub\IndiegogoApiClient\Response;
 
-use Indiegogo\Entity\CampaignComment;
+use BackerClub\IndiegogoApiClient\Entity\CampaignComment;
 
 class CampaignCommentsResponse extends PaginatedResponse
 {

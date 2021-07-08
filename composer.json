@@ -10,16 +10,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "Indiegogo\\": "./src"
+      "BackerClub\\IndiegogoApiClient\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Indiegogo\\Tests\\": "./tests"
+      "BackerClub\\IndiegogoApiClient\\Tests\\": "tests"
     }
   },
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.0",
     "ext-json": "*",
     "guzzlehttp/guzzle": ">=6.5"
   },

@@ -1,10 +1,11 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Entity\Campaign;
+use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Indiegogo\Entity\Campaign;
 
 class CampaignsTest extends ClientTestCase
 {
@@ -18,7 +19,7 @@ class CampaignsTest extends ClientTestCase
 
         $campaignsResponse = $indiegogo->campaigns();
 
-        $this->assertInstanceOf(\Indiegogo\Response\CampaignsResponse::class, $campaignsResponse);
+        $this->assertInstanceOf(CampaignsResponse::class, $campaignsResponse);
     }
 
     public function testCampaignIsFixedFundingType()

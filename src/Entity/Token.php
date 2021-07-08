@@ -1,8 +1,8 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 /**
  * Class TokenResponse
@@ -14,9 +14,9 @@ class Token extends AbstractEntity
 {
     private string $accessToken;
     private string $tokenType = 'Bearer';
-    private int $expiresIn;
+    private int    $expiresIn;
     private string $refreshToken;
-    private int $createdAt;
+    private int    $createdAt;
 
     /**
      * @return string

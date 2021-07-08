@@ -1,6 +1,6 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
 class Auth
 {
@@ -10,7 +10,7 @@ class Auth
 
     public function __construct(string $email, string $password, string $apiToken)
     {
-        $this->email = $email;
+        $this->email    = $email;
         $this->password = $password;
         $this->apiToken = $apiToken;
     }

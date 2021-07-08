@@ -1,8 +1,8 @@
 <?php
 
-namespace Indiegogo\Response;
+namespace BackerClub\IndiegogoApiClient\Response;
 
-use Indiegogo\Entity\AccountContribution;
+use BackerClub\IndiegogoApiClient\Entity\AccountContribution;
 
 class AccountContributionsResponse extends PaginatedResponse
 {

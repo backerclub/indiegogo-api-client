@@ -1,18 +1,19 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
+use DateTime;
 
 class CampaignComment extends AbstractEntity
 {
-    private int $id;
-    private \DateTime $createdAt;
-    private string $text;
-    private bool $fromTheTeam;
-    private string $ownerType;
-    private bool $private;
-    private Account $account;
+    private int      $id;
+    private DateTime $createdAt;
+    private string   $text;
+    private bool     $fromTheTeam;
+    private string   $ownerType;
+    private bool     $private;
+    private Account  $account;
 
     /**
      * @return int
@@ -31,19 +32,19 @@ class CampaignComment extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      */
     public function setCreatedAt(string $createdAt): void
     {
-        $this->createdAt = new \DateTime($createdAt);
+        $this->createdAt = new DateTime($createdAt);
     }
 
     /**

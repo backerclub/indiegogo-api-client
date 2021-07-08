@@ -1,7 +1,8 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
@@ -17,6 +18,6 @@ class FavoritesTest extends ClientTestCase
 
         $favoritesResponse = $indiegogo->favorites();
 
-        $this->assertInstanceOf(\Indiegogo\Response\CampaignsResponse::class, $favoritesResponse);
+        $this->assertInstanceOf(CampaignsResponse::class, $favoritesResponse);
     }
 }

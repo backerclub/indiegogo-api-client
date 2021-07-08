@@ -1,7 +1,8 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
@@ -17,6 +18,6 @@ class SearchTest extends ClientTestCase
 
         $campaignsResponse = $indiegogo->search();
 
-        $this->assertInstanceOf(\Indiegogo\Response\CampaignsResponse::class, $campaignsResponse);
+        $this->assertInstanceOf(CampaignsResponse::class, $campaignsResponse);
     }
 }

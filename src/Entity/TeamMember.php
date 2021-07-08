@@ -1,23 +1,24 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 class TeamMember extends AbstractEntity
 {
-    private int $id;
+    private int    $id;
     private string $name;
     /**
      * Team Owner or Invititation Status
      * ENUM: owner, accepted
+     *
      * @var string
      */
     private string $status;
-    private bool $owner;
+    private bool   $owner;
     private string $avatarUrl;
     // $facebook
-    private int $accountId;
+    private int    $accountId;
     private string $userType;
 
     /**

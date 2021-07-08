@@ -1,14 +1,14 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 class Sku extends AbstractEntity
 {
-    private int $id;
+    private int    $id;
     private string $code;
-    private array $choices;
+    private array  $choices;
 
     /**
      * @return int

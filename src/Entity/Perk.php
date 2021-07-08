@@ -1,24 +1,25 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
+use DateTime;
 
 class Perk extends AbstractEntity
 {
-    private int $id;
-    private string $campaignSlug;
-    private int $amount;
-    private string $description;
-    private int $numberClaimed;
-    private int $numberAvailable;
-    private \DateTime $estimatedDeliveryDate;
-    private bool $shippingAddressRequired;
-    private string $label;
-    private $validationErrors;
-    private bool $featured;
-    private int $nonTaxDeductibleAmount = 0;
-    private string $perkType;
+    private int      $id;
+    private string   $campaignSlug;
+    private int      $amount;
+    private string   $description;
+    private int      $numberClaimed;
+    private int      $numberAvailable;
+    private DateTime $estimatedDeliveryDate;
+    private bool     $shippingAddressRequired;
+    private string   $label;
+    private          $validationErrors;
+    private bool     $featured;
+    private int      $nonTaxDeductibleAmount = 0;
+    private string   $perkType;
     /**
      * Items exist when the Perk belongs to an Order.
      *
@@ -146,9 +147,9 @@ class Perk extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getEstimatedDeliveryDate(): \DateTime
+    public function getEstimatedDeliveryDate(): DateTime
     {
         return $this->estimatedDeliveryDate;
     }
@@ -158,7 +159,7 @@ class Perk extends AbstractEntity
      */
     public function setEstimatedDeliveryDate(string $estimatedDeliveryDate): void
     {
-        $this->estimatedDeliveryDate = new \DateTime($estimatedDeliveryDate);
+        $this->estimatedDeliveryDate = new DateTime($estimatedDeliveryDate);
     }
 
     /**

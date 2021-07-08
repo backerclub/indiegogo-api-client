@@ -1,14 +1,14 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 class Account extends AbstractEntity
 {
-    private int $id;
+    private int    $id;
     private string $firstname = '';
-    private string $lastname = '';
+    private string $lastname  = '';
     private string $avatarUrl = '';
 
     /**

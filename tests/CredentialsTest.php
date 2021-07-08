@@ -1,7 +1,8 @@
 <?php
 
-namespace Indiegogo\Tests;
+namespace BackerClub\IndiegogoApiClient\Tests;
 
+use BackerClub\IndiegogoApiClient\Entity\Credentials;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
@@ -17,6 +18,6 @@ class CredentialsTest extends ClientTestCase
 
         $credentials = $indiegogo->credentials();
 
-        $this->assertInstanceOf(\Indiegogo\Entity\Credentials::class, $credentials);
+        $this->assertInstanceOf(Credentials::class, $credentials);
     }
 }

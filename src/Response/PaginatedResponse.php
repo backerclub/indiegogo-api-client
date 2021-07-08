@@ -1,14 +1,14 @@
 <?php
 
-namespace Indiegogo\Response;
+namespace BackerClub\IndiegogoApiClient\Response;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 abstract class PaginatedResponse extends AbstractEntity
 {
-    private int $count;
+    private int        $count;
     private Pagination $pagination;
-    protected array $response;
+    protected array    $response;
 
     abstract public function setResponse(array $response): void;
 

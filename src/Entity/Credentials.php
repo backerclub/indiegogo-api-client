@@ -1,23 +1,23 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use DateTime;
 
 class Credentials extends Account
 {
-    private string $name;
-    private string $email;
-    private string $profilePath;
-    private \DateTime $dateOfBirth;
-    private int $contributionsCount;
-    private string $bio;
-    private string $city;
-    private string $country;
-    private array $campaigns;
-    private string $validationErrors;
-    private string $state;
-    private string $address;
+    private string   $name;
+    private string   $email;
+    private string   $profilePath;
+    private DateTime $dateOfBirth;
+    private int      $contributionsCount;
+    private string   $bio;
+    private string   $city;
+    private string   $country;
+    private array    $campaigns;
+    private string   $validationErrors;
+    private string   $state;
+    private string   $address;
 
     /**
      * @return string
@@ -68,9 +68,9 @@ class Credentials extends Account
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getDateOfBirth(): \DateTime
+    public function getDateOfBirth(): DateTime
     {
         return $this->dateOfBirth;
     }
@@ -80,7 +80,7 @@ class Credentials extends Account
      */
     public function setDateOfBirth(string $dateOfBirth): void
     {
-        $this->dateOfBirth = new \DateTime($dateOfBirth);
+        $this->dateOfBirth = new DateTime($dateOfBirth);
     }
 
     /**

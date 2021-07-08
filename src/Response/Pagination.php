@@ -1,8 +1,8 @@
 <?php
 
-namespace Indiegogo\Response;
+namespace BackerClub\IndiegogoApiClient\Response;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
 
 class Pagination extends AbstractEntity
 {
@@ -28,12 +28,14 @@ class Pagination extends AbstractEntity
 
     /**
      * Total paginated result count
+     *
      * @var int
      */
     private int $count;
 
     /**
      * Total Pages
+     *
      * @var int
      */
     private int $pages;

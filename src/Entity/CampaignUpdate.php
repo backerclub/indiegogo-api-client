@@ -1,18 +1,19 @@
 <?php
 
-namespace Indiegogo\Entity;
+namespace BackerClub\IndiegogoApiClient\Entity;
 
-use Indiegogo\AbstractEntity;
+use BackerClub\IndiegogoApiClient\AbstractEntity;
+use DateTime;
 
 class CampaignUpdate extends AbstractEntity
 {
-    private int $id;
-    private \DateTime $created_at;
-    private string $text;
-    private string $html;
-    private string $previewText;
-    private array $imagUrls = [];
-    private Account $account;
+    private int      $id;
+    private DateTime $created_at;
+    private string   $text;
+    private string   $html;
+    private string   $previewText;
+    private array    $imagUrls = [];
+    private Account  $account;
 
     /**
      * @return int
@@ -31,9 +32,9 @@ class CampaignUpdate extends AbstractEntity
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): DateTime
     {
         return $this->created_at;
     }
@@ -43,7 +44,7 @@ class CampaignUpdate extends AbstractEntity
      */
     public function setCreatedAt(string $created_at): void
     {
-        $this->created_at = new \DateTime($created_at);
+        $this->created_at = new DateTime($created_at);
     }
 
     /**

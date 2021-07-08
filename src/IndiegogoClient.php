@@ -1,19 +1,20 @@
 <?php
 
-namespace Indiegogo;
+namespace BackerClub\IndiegogoApiClient;
 
+use BackerClub\IndiegogoApiClient\Entity\Account;
+use BackerClub\IndiegogoApiClient\Entity\Auth;
+use BackerClub\IndiegogoApiClient\Entity\Credentials;
+use BackerClub\IndiegogoApiClient\Entity\Token;
+use BackerClub\IndiegogoApiClient\Response\AccountContributionsResponse;
+use BackerClub\IndiegogoApiClient\Response\CampaignCommentsResponse;
+use BackerClub\IndiegogoApiClient\Response\CampaignPerksResponse;
+use BackerClub\IndiegogoApiClient\Response\CampaignsResponse;
+use BackerClub\IndiegogoApiClient\Response\CampaignUpdatesResponse;
+use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Indiegogo\Entity\Account;
-use Indiegogo\Entity\Auth;
-use Indiegogo\Entity\Credentials;
-use Indiegogo\Entity\Token;
-use Indiegogo\Response\AccountContributionsResponse;
-use Indiegogo\Response\CampaignCommentsResponse;
-use Indiegogo\Response\CampaignPerksResponse;
-use Indiegogo\Response\CampaignsResponse;
-use Indiegogo\Response\CampaignUpdatesResponse;
 
-class Client
+class IndiegogoClient
 {
     private string $apiUrl = 'https://api.indiegogo.com/2/';
 
@@ -27,7 +28,8 @@ class Client
 
     /**
      * Client constructor.
-     * @param Auth $auth
+     *
+     * @param Auth                 $auth
      * @param ClientInterface|null $httpClient
      */
     public function __construct(Auth $auth, Token $token = null, ClientInterface $httpClient = null)
@@ -39,7 +41,7 @@ class Client
         }
 
         if (is_null($httpClient)) {
-            $this->httpClient = new \GuzzleHttp\Client();
+            $this->httpClient = new Client();
         } else {
             $this->httpClient = $httpClient;
         }
@@ -50,13 +52,13 @@ class Client
      * https://developer.indiegogo.com/docs/search
      *
      * @param array $params
-     * @param int $page
+     * @param int   $page
      * @return CampaignsResponse
      */
     public function search(array $params = [], $page = 1)
     {
         $requestOptions = [
-            'query' => ['page' => $page]
+            'query' => ['page' => $page],
         ];
 
         if (!empty($params)) {
@@ -79,7 +81,7 @@ class Client
     public function campaigns(array $ids = [], int $page = 1)
     {
         $requestOptions = [
-            'query' => ['page' => $page]
+            'query' => ['page' => $page],
         ];
 
         if (!empty($ids)) {
@@ -207,11 +209,11 @@ class Client
             $this->tokenRequestUrl,
             [
                 'form_params' => [
-                    'grant_type' => 'password',
+                    'grant_type'      => 'password',
                     'credential_type' => 'email',
-                    'email' => $this->auth->getEmail(),
-                    'password' => $this->auth->getPassword()
-                ]
+                    'email'           => $this->auth->getEmail(),
+                    'password'        => $this->auth->getPassword(),
+                ],
             ]
         );
 
@@ -229,8 +231,8 @@ class Client
         }
 
         $options['query'] += [
-            'api_token' => $this->auth->getApiToken(),
-            'access_token' => $this->token->getAccessToken()
+            'api_token'    => $this->auth->getApiToken(),
+            'access_token' => $this->token->getAccessToken(),
         ];
 
         return $this->httpClient->request(
