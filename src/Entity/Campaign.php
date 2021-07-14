@@ -7,399 +7,400 @@ use DateTime;
 
 class Campaign extends AbstractEntity
 {
-    private int    $id;
-    private string $slug;
-    private string $title;
-    // $imageTypes
-    private Currency $currency;
-    private DateTime $createdAt;
-    private DateTime $updatedAt;
-    private string   $tagline;
-    private int      $fundingDays;
-    private string   $baseballCardImageUrl;
-    private string   $city;
-    private bool     $foreverFundingActive;
-    private bool     $stripePayoutActive;
-    private int      $goal;
-    private bool     $perksAvailable;
-    private Category $category;
-    private int      $collectedFunds;
-    private string   $fundingType;
-    private string   $countryCodeAlpha2;
-    private string   $region;
-    private string   $regionCode;
-    private int      $contributionsCount;
-    private int      $commentsCount;
-    private int      $updatesCount;
-    private DateTime $fundingEndsAt;
-    private DateTime $fundingStartedAt;
-    private string   $webUrl;
-    private bool     $favorited;
-    private int      $foreverFundingCollectedFunds;
-    private DateTime $foreverFundingEndsAt;
-    private string   $videoOverlayUrl;
-    private string   $mainImageUrl;
-    private string   $mainVideoUrl;
-    private string   $facebookUrl;
-    private string   $productStage;
+    private ?int      $id                           = null;
+    private ?string   $slug                         = null;
+    private ?string   $title                        = null;
+    private ?Currency $currency                     = null;
+    private ?DateTime $createdAt                    = null;
+    private ?DateTime $updatedAt                    = null;
+    private ?string   $tagline                      = null;
+    private ?int      $fundingDays                  = null;
+    private ?string   $baseballCardImageUrl         = null;
+    private ?string   $city                         = null;
+    private ?bool     $foreverFundingActive         = null;
+    private ?bool     $stripePayoutActive           = null;
+    private ?int      $goal                         = null;
+    private ?bool     $perksAvailable               = null;
+    private ?Category $category                     = null;
+    private ?int      $collectedFunds               = null;
+    private ?string   $fundingType                  = null;
+    private ?string   $countryCodeAlpha2            = null;
+    private ?string   $region                       = null;
+    private ?string   $regionCode                   = null;
+    private ?int      $contributionsCount           = null;
+    private ?int      $commentsCount                = null;
+    private ?int      $updatesCount                 = null;
+    private ?DateTime $fundingEndsAt                = null;
+    private ?DateTime $fundingStartedAt             = null;
+    private ?string   $webUrl                       = null;
+    private ?bool     $favorited                    = null;
+    private ?int      $foreverFundingCollectedFunds = null;
+    private ?DateTime $foreverFundingEndsAt         = null;
+    private ?string   $videoOverlayUrl              = null;
+    private ?string   $mainImageUrl                 = null;
+    private ?string   $mainVideoUrl                 = null;
+    private ?string   $facebookUrl                  = null;
+    private ?string   $productStage                 = null;
     /**
      * @var CampaignUpdate[]
      */
-    private array $latestUpdates;
+    private array $latestUpdates = [];
     /**
      * @var TeamMember[]
      */
-    private array $teamMembers;
+    private array $teamMembers = [];
 
+    // TODO
+    // $imageTypes
     // $projectSponsors
     // life
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function setId(int $id): void
+    public function setId(?int $id): void
     {
         $this->id = $id;
     }
 
-    public function getSlug(): string
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
 
-    public function setSlug(string $slug): void
+    public function setSlug(?string $slug): void
     {
         $this->slug = $slug;
     }
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }
 
-    public function getCurrency(): Currency
+    public function getCurrency(): ?Currency
     {
         return $this->currency;
     }
 
-    public function setCurrency(object $currency): void
+    public function setCurrency(?object $currency): void
     {
-        $this->currency = new Currency($currency);
+        $this->currency = $currency ? new Currency($currency) : null;
     }
 
-    public function getCreatedAt(): DateTime
+    public function getCreatedAt(): ?DateTime
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(string $createdAt): void
+    public function setCreatedAt(?string $createdAt): void
     {
-        $this->createdAt = new DateTime($createdAt);
+        $this->createdAt = $createdAt ? new DateTime($createdAt) : null;
     }
 
-    public function getUpdatedAt(): DateTime
+    public function getUpdatedAt(): ?DateTime
     {
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(string $updatedAt): void
+    public function setUpdatedAt(?string $updatedAt): void
     {
-        $this->updatedAt = new DateTime($updatedAt);
+        $this->updatedAt = $updatedAt ? new DateTime($updatedAt) : null;
     }
 
-    public function getTagline(): string
+    public function getTagline(): ?string
     {
         return $this->tagline;
     }
 
-    public function setTagline(string $tagline): void
+    public function setTagline(?string $tagline): void
     {
         $this->tagline = $tagline;
     }
 
-    public function getFundingDays(): int
+    public function getFundingDays(): ?int
     {
         return $this->fundingDays;
     }
 
-    public function setFundingDays(int $fundingDays): void
+    public function setFundingDays(?int $fundingDays): void
     {
         $this->fundingDays = $fundingDays;
     }
 
-    public function getBaseballCardImageUrl(): string
+    public function getBaseballCardImageUrl(): ?string
     {
         return $this->baseballCardImageUrl;
     }
 
-    public function setBaseballCardImageUrl(string $baseballCardImageUrl): void
+    public function setBaseballCardImageUrl(?string $baseballCardImageUrl): void
     {
         $this->baseballCardImageUrl = $baseballCardImageUrl;
     }
 
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
 
-    public function setCity(string $city): void
+    public function setCity(?string $city): void
     {
         $this->city = $city;
     }
 
-    public function isForeverFundingActive(): bool
+    public function isForeverFundingActive(): ?bool
     {
         return $this->foreverFundingActive;
     }
 
-    public function setForeverFundingActive(bool $foreverFundingActive): void
+    public function setForeverFundingActive(?bool $foreverFundingActive): void
     {
         $this->foreverFundingActive = $foreverFundingActive;
     }
 
-    public function isStripePayoutActive(): bool
+    public function isStripePayoutActive(): ?bool
     {
         return $this->stripePayoutActive;
     }
 
-    public function setStripePayoutActive(bool $stripePayoutActive): void
+    public function setStripePayoutActive(?bool $stripePayoutActive): void
     {
         $this->stripePayoutActive = $stripePayoutActive;
     }
 
-    public function getGoal(): int
+    public function getGoal(): ?int
     {
         return $this->goal;
     }
 
-    public function setGoal(int $goal): void
+    public function setGoal(?int $goal): void
     {
         $this->goal = $goal;
     }
 
-    public function isPerksAvailable(): bool
+    public function isPerksAvailable(): ?bool
     {
         return $this->perksAvailable;
     }
 
-    public function setPerksAvailable(bool $perksAvailable): void
+    public function setPerksAvailable(?bool $perksAvailable): void
     {
         $this->perksAvailable = $perksAvailable;
     }
 
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    public function setCategory(object $category): void
+    public function setCategory(?object $category): void
     {
-        $this->category = new Category($category);
+        $this->category = $category ? new Category($category) : null;
     }
 
-    public function getCollectedFunds(): int
+    public function getCollectedFunds(): ?int
     {
         return $this->collectedFunds;
     }
 
-    public function setCollectedFunds(int $collectedFunds): void
+    public function setCollectedFunds(?int $collectedFunds): void
     {
         $this->collectedFunds = $collectedFunds;
     }
 
-    public function getFundingType(): string
+    public function getFundingType(): ?string
     {
         return $this->fundingType;
     }
 
-    public function setFundingType(string $fundingType): void
+    public function setFundingType(?string $fundingType): void
     {
         $this->fundingType = $fundingType;
     }
 
-    public function isFixedFundingType(): bool
+    public function isFixedFundingType(): ?bool
     {
         return ($this->getFundingType() === "fixed");
     }
 
-    public function isFlexibleFundingType(): bool
+    public function isFlexibleFundingType(): ?bool
     {
         return ($this->getFundingType() === "flexible");
     }
 
-    public function getCountryCodeAlpha2(): string
+    public function getCountryCodeAlpha2(): ?string
     {
         return $this->countryCodeAlpha2;
     }
 
-    public function setCountryCodeAlpha2(string $countryCodeAlpha2): void
+    public function setCountryCodeAlpha2(?string $countryCodeAlpha2): void
     {
         $this->countryCodeAlpha2 = $countryCodeAlpha2;
     }
 
-    public function getRegion(): string
+    public function getRegion(): ?string
     {
         return $this->region;
     }
 
-    public function setRegion(string $region): void
+    public function setRegion(?string $region): void
     {
         $this->region = $region;
     }
 
-    public function getRegionCode(): string
+    public function getRegionCode(): ?string
     {
         return $this->regionCode;
     }
 
-    public function setRegionCode(string $regionCode): void
+    public function setRegionCode(?string $regionCode): void
     {
         $this->regionCode = $regionCode;
     }
 
-    public function getContributionsCount(): int
+    public function getContributionsCount(): ?int
     {
         return $this->contributionsCount;
     }
 
-    public function setContributionsCount(int $contributionsCount): void
+    public function setContributionsCount(?int $contributionsCount): void
     {
         $this->contributionsCount = $contributionsCount;
     }
 
-    public function getCommentsCount(): int
+    public function getCommentsCount(): ?int
     {
         return $this->commentsCount;
     }
 
-    public function setCommentsCount(int $commentsCount): void
+    public function setCommentsCount(?int $commentsCount): void
     {
         $this->commentsCount = $commentsCount;
     }
 
-    public function getUpdatesCount(): int
+    public function getUpdatesCount(): ?int
     {
         return $this->updatesCount;
     }
 
-    public function setUpdatesCount(int $updatesCount): void
+    public function setUpdatesCount(?int $updatesCount): void
     {
         $this->updatesCount = $updatesCount;
     }
 
-    public function getFundingEndsAt(): DateTime
+    public function getFundingEndsAt(): ?DateTime
     {
         return $this->fundingEndsAt;
     }
 
-    public function setFundingEndsAt(string $fundingEndsAt): void
+    public function setFundingEndsAt(?string $fundingEndsAt): void
     {
-        $this->fundingEndsAt = new DateTime($fundingEndsAt);
+        $this->fundingEndsAt = $fundingEndsAt ? new DateTime($fundingEndsAt) : null;
     }
 
-    public function getFundingStartedAt(): DateTime
+    public function getFundingStartedAt(): ?DateTime
     {
         return $this->fundingStartedAt;
     }
 
-    public function setFundingStartedAt(string $fundingStartedAt): void
+    public function setFundingStartedAt(?string $fundingStartedAt): void
     {
-        $this->fundingStartedAt = new DateTime($fundingStartedAt);
+        $this->fundingStartedAt = $fundingStartedAt ? new DateTime($fundingStartedAt) : null;
     }
 
-    public function getWebUrl(): string
+    public function getWebUrl(): ?string
     {
         return $this->webUrl;
     }
 
-    public function setWebUrl(string $webUrl): void
+    public function setWebUrl(?string $webUrl): void
     {
         $this->webUrl = $webUrl;
     }
 
-    public function isFavorited(): bool
+    public function isFavorited(): ?bool
     {
         return $this->favorited;
     }
 
-    public function setFavorited(bool $favorited): void
+    public function setFavorited(?bool $favorited): void
     {
         $this->favorited = $favorited;
     }
 
-    public function getForeverFundingCollectedFunds(): int
+    public function getForeverFundingCollectedFunds(): ?int
     {
         return $this->foreverFundingCollectedFunds;
     }
 
-    public function setForeverFundingCollectedFunds(int $foreverFundingCollectedFunds): void
+    public function setForeverFundingCollectedFunds(?int $foreverFundingCollectedFunds): void
     {
         $this->foreverFundingCollectedFunds = $foreverFundingCollectedFunds;
     }
 
-    public function getForeverFundingEndsAt(): DateTime
+    public function getForeverFundingEndsAt(): ?DateTime
     {
         return $this->foreverFundingEndsAt;
     }
 
-    public function setForeverFundingEndsAt(string $foreverFundingEndsAt): void
+    public function setForeverFundingEndsAt(?string $foreverFundingEndsAt): void
     {
-        $this->foreverFundingEndsAt = new DateTime($foreverFundingEndsAt);
+        $this->foreverFundingEndsAt = $foreverFundingEndsAt ? new DateTime($foreverFundingEndsAt) : null;
     }
 
-    public function getVideoOverlayUrl(): string
+    public function getVideoOverlayUrl(): ?string
     {
         return $this->videoOverlayUrl;
     }
 
-    public function setVideoOverlayUrl(string $videoOverlayUrl): void
+    public function setVideoOverlayUrl(?string $videoOverlayUrl): void
     {
         $this->videoOverlayUrl = $videoOverlayUrl;
     }
 
-    public function getMainImageUrl(): string
+    public function getMainImageUrl(): ?string
     {
         return $this->mainImageUrl;
     }
 
-    public function setMainImageUrl(string $mainImageUrl): void
+    public function setMainImageUrl(?string $mainImageUrl): void
     {
         $this->mainImageUrl = $mainImageUrl;
     }
 
-    public function getMainVideoUrl(): string
+    public function getMainVideoUrl(): ?string
     {
         return $this->mainVideoUrl;
     }
 
-    public function setMainVideoUrl(string $mainVideoUrl): void
+    public function setMainVideoUrl(?string $mainVideoUrl): void
     {
         $this->mainVideoUrl = $mainVideoUrl;
     }
 
-    public function getFacebookUrl(): string
+    public function getFacebookUrl(): ?string
     {
         return $this->facebookUrl;
     }
 
-    public function setFacebookUrl(string $facebookUrl): void
+    public function setFacebookUrl(?string $facebookUrl): void
     {
         $this->facebookUrl = $facebookUrl;
     }
 
-    public function getProductStage(): string
+    public function getProductStage(): ?string
     {
         return $this->productStage;
     }
 
-    public function setProductStage(string $productStage): void
+    public function setProductStage(?string $productStage): void
     {
         $this->productStage = $productStage;
     }

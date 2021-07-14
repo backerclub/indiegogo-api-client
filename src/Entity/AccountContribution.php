@@ -7,81 +7,81 @@ use DateTime;
 
 class AccountContribution extends AbstractEntity
 {
-    private int      $id;
-    private DateTime $createdAt;
-    private string   $avatarUrl;
-    private int      $amount;
-    private string   $by;
-    private Campaign $campaign;
-    private Order    $order;
+    private ?int      $id        = null;
+    private ?DateTime $createdAt = null;
+    private ?string   $avatarUrl = null;
+    private ?int      $amount    = null;
+    private ?string   $by        = null;
+    private ?Campaign $campaign  = null;
+    private ?Order    $order     = null;
 
     public function getId(): int
     {
         return $this->id;
     }
 
-    public function setId(int $id): void
+    public function setId(?int $id): void
     {
         $this->id = $id;
     }
 
-    public function getCreatedAt(): DateTime
+    public function getCreatedAt(): ?DateTime
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(string $createdAt): void
+    public function setCreatedAt(?string $createdAt): void
     {
-        $this->createdAt = new DateTime($createdAt);
+        $this->createdAt = $createdAt ? new DateTime($createdAt) : null;
     }
 
-    public function getAvatarUrl(): string
+    public function getAvatarUrl(): ?string
     {
         return $this->avatarUrl;
     }
 
-    public function setAvatarUrl(string $avatarUrl): void
+    public function setAvatarUrl(?string $avatarUrl): void
     {
         $this->avatarUrl = $avatarUrl;
     }
 
-    public function getAmount(): int
+    public function getAmount(): ?int
     {
         return $this->amount;
     }
 
-    public function setAmount(int $amount): void
+    public function setAmount(?int $amount): void
     {
         $this->amount = $amount;
     }
 
-    public function getBy(): string
+    public function getBy(): ?string
     {
         return $this->by;
     }
 
-    public function setBy(string $by): void
+    public function setBy(?string $by): void
     {
         $this->by = $by;
     }
 
-    public function getCampaign(): Campaign
+    public function getCampaign(): ?Campaign
     {
         return $this->campaign;
     }
 
-    public function setCampaign(object $campaign): void
+    public function setCampaign(?object $campaign): void
     {
-        $this->campaign = new Campaign($campaign);
+        $this->campaign = $campaign ? new Campaign($campaign) : null;
     }
 
-    public function getOrder(): Order
+    public function getOrder(): ?Order
     {
         return $this->order;
     }
 
-    public function setOrder(object $order): void
+    public function setOrder(?object $order): void
     {
-        $this->order = new Order($order);
+        $this->order = $order ? new Order($order) : null;
     }
 }

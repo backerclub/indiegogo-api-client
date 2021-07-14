@@ -4,7 +4,6 @@ namespace BackerClub\IndiegogoApiClient;
 
 use DateTimeInterface;
 use JsonSerializable;
-use Throwable;
 
 abstract class AbstractEntity implements JsonSerializable
 {
@@ -27,13 +26,7 @@ abstract class AbstractEntity implements JsonSerializable
         foreach ($getterMethods as $getterMethod) {
             $key = lcfirst(str_replace('get', '', $getterMethod));
 
-            try {
-                // This will throw an exception if the object's property hasn't been initialized yet,
-                // which happens when we skip setting null values (see self::hydrate() method).
-                $value = $this->{$getterMethod}();
-            } catch (Throwable $exception) {
-                $value = null;
-            }
+            $value = $this->{$getterMethod}();
 
             if ($value instanceof DateTimeInterface) {
                 $data[$key] = $value->format(DateTimeInterface::ATOM);
@@ -61,10 +54,6 @@ abstract class AbstractEntity implements JsonSerializable
         $methods = get_class_methods($this);
 
         foreach ($options as $key => $value) {
-            if (is_null($value)) {
-                // No need to set null values;
-                continue;
-            }
             $method = $this->getSetterMethod($key);
 
             if (in_array($method, $methods, true)) {

@@ -10,38 +10,38 @@ use DateTime;
  */
 class Token extends AbstractEntity
 {
-    private string   $accessToken;
-    private string   $tokenType = 'Bearer';
-    private int      $expiresIn;
-    private string   $refreshToken;
-    private DateTime $createdAt;
+    private ?string   $accessToken  = null;
+    private ?string   $tokenType    = 'Bearer';
+    private ?int      $expiresIn    = null;
+    private ?string   $refreshToken = null;
+    private ?DateTime $createdAt    = null;
 
-    public function getAccessToken(): string
+    public function getAccessToken(): ?string
     {
         return $this->accessToken;
     }
 
-    public function setAccessToken(string $accessToken): void
+    public function setAccessToken(?string $accessToken): void
     {
         $this->accessToken = $accessToken;
     }
 
-    public function getTokenType(): string
+    public function getTokenType(): ?string
     {
         return $this->tokenType;
     }
 
-    public function setTokenType(string $tokenType): void
+    public function setTokenType(?string $tokenType): void
     {
         $this->tokenType = $tokenType;
     }
 
-    public function getExpiresIn(): int
+    public function getExpiresIn(): ?int
     {
         return $this->expiresIn;
     }
 
-    public function setExpiresIn(int $expiresIn): void
+    public function setExpiresIn(?int $expiresIn): void
     {
         $this->expiresIn = $expiresIn;
     }
@@ -49,32 +49,32 @@ class Token extends AbstractEntity
     /**
      * Is the access token expired?
      */
-    public function isExpired(): bool
+    public function isExpired(): ?bool
     {
         if (!isset($this->expiresIn, $this->createdAt)) {
             return false;
         }
 
-        return ($this->expiresIn + $this->getCreatedAt()->getTimestamp() < time());
+        return ($this->expiresIn + $this->getCreatedAt()?->getTimestamp() < time());
     }
 
-    public function getRefreshToken(): string
+    public function getRefreshToken(): ?string
     {
         return $this->refreshToken;
     }
 
-    public function setRefreshToken(string $refreshToken): void
+    public function setRefreshToken(?string $refreshToken): void
     {
         $this->refreshToken = $refreshToken;
     }
 
-    public function getCreatedAt(): DateTime
+    public function getCreatedAt(): ?DateTime
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(int $createdAt): void
+    public function setCreatedAt(?int $createdAt): void
     {
-        $this->createdAt = (new DateTime())->setTimestamp($createdAt);
+        $this->createdAt = $createdAt ? (new DateTime())->setTimestamp($createdAt) : null;
     }
 }
